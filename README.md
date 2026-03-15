@@ -6,7 +6,7 @@ This is a CLI tool to generate `.gitgnore` files written in zig.
 
 # Installation
 
-Install from our pre-built binary by running:
+Install on MacOS or GNU/Linux from our pre-built binary by running:
 
 ```sh
 curl -sSL https://raw.githubusercontent.com/ivansantiagojr/zignr/main/install.sh | bash -
