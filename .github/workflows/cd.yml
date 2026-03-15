@@ -8,14 +8,17 @@ on:
 jobs:
   publish-github:
     name: Publish on GitHub
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        TARGET:
-          - x86_64-linux
-          - x86_64-macos
-          - aarch64-macos
+        include:
+          - TARGET: x86_64-linux
+            os: ubuntu-latest
+          - TARGET: x86_64-macos
+            os: macos-latest
+          - TARGET: aarch64-macos
+            os: macos-latest
 
     steps:
       - name: Checkout the repository

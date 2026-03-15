@@ -41,8 +41,30 @@ linux_install () {
 	echo "Then use run zignr"
 }
 
-macos_install(){
-	echo "Mac installation will be supported soon"
+macos_install() {
+    LOCAL_BIN="$HOME/.local/bin"
+
+    # Create ~/.local/bin if it doesn't exist
+    if [ ! -d "$LOCAL_BIN" ]; then
+        echo "Creating $LOCAL_BIN..."
+        mkdir -p "$LOCAL_BIN"
+    fi
+
+    echo "Moving $APP_NAME to $LOCAL_BIN..."
+    mv "$APP_NAME" "$LOCAL_BIN/$APP_NAME"
+
+    # Verify installation
+    if [ $? -eq 0 ]; then
+        echo "$APP_NAME installed successfully!"
+    else
+        echo "Failed to move $APP_NAME to $LOCAL_BIN. Check permissions."
+        exit 1
+    fi
+
+    echo
+    echo "Add $LOCAL_BIN to your PATH so you can run $APP_NAME from anywhere."
+    echo "Example: export PATH=\"\$HOME/.local/bin:\$PATH\""
+    echo "Then you can run $APP_NAME"
 }
 
 case "$OSTYPE" in
