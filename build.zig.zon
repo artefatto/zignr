@@ -1,6 +1,6 @@
 .{
     .name = .zignr,
-    .version = "0.2.0",
+    .version = "0.3.0",
     .fingerprint = 0x3b833c668ea9d587,
     .minimum_zig_version = "0.15.2",
     .paths = .{
