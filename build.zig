@@ -7,11 +7,13 @@ pub fn build(b: *std.Build) void {
 
     const exe = b.addExecutable(.{
         .name = "zignr",
-        .root_source_file = b.path("src/main.zig"),
-        .target = target,
-        .optimize = optimize,
-        .strip = true,
-        .single_threaded = true,
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/main.zig"),
+            .strip = true,
+            .target = target,
+            .optimize = optimize,
+            .single_threaded = true,
+        }),
     });
 
     b.installArtifact(exe);
