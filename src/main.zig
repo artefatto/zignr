@@ -1,5 +1,5 @@
 const std = @import("std");
-const print = std.io.getStdOut().writer();
+var stdout = std.fs.File.stdout().writer(&.{});
 const commands = @import("commands.zig");
 
 pub fn main() !void {
@@ -26,7 +26,7 @@ pub fn main() !void {
     ;
 
     if (args.len != 2) {
-        std.debug.print(help_message, .{});
+        try stdout.interface.print(help_message, .{});
         return;
     }
 

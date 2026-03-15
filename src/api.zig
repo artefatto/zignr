@@ -1,5 +1,6 @@
 const std = @import("std");
 const http = std.http;
+var stdout = std.fs.File.stdout().writer(&.{});
 
 const base_url = "https://donotcommit.com/api/";
 
@@ -25,7 +26,7 @@ pub fn request(allocator: std.mem.Allocator, args: [][:0]u8, path: []const u8) !
     try req.wait();
 
     if (req.response.status != .ok) {
-        std.debug.print(
+        try stdout.interface.print(
             \\Something went wrong. Check you passed only valid languages/templates.
             \\Use: '{s} list' to see the available languages/templates
         , .{args[0]});
