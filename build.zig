@@ -9,7 +9,7 @@ pub fn build(b: *std.Build) void {
         .name = "zignr",
         .root_module = b.createModule(.{
             .root_source_file = b.path("src/main.zig"),
-            .strip = true,
+            .strip = optimize != .Debug,
             .target = target,
             .optimize = optimize,
             .single_threaded = true,
