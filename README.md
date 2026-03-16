@@ -4,7 +4,7 @@ This is a CLI tool to generate `.gitignore` files written in zig.
 
 # Installation
 
-For now, you can install from our pre-built binary (Linux only):
+Install on MacOS or GNU/Linux from our pre-built binary by running:
 
 ```sh
 curl -sSL https://raw.githubusercontent.com/ivansantiagojr/zignr/main/install.sh | bash -
