@@ -73,7 +73,7 @@ case "$OSTYPE" in
 		download_and_create_executable
 		linux_install
 		;;
-	darwin)
+	darwin*)
 		if [[ $CPU_TYPE == "x86_64" ]]; then
 			binary_url=$BINARY_URL_MACOS
 		fi
