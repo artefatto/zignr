@@ -13,7 +13,13 @@ CPU_TYPE=$CPUTYPE
 
 download_and_create_executable() {
 	echo "Downloading zignr..."
-	wget -q "$binary_url" -O "$APP_NAME"
+
+	# Try curl first, fall back to wget
+	if command -v curl &> /dev/null; then
+		curl -sL "$binary_url" -o "$APP_NAME"
+	elif command -v wget &> /dev/null; then
+		wget -q "$binary_url" -O "$APP_NAME"
+	fi
 
 	if [ $? -ne 0 ]; then
     	echo "Failed to download zignr."
@@ -73,11 +79,11 @@ case "$OSTYPE" in
 		download_and_create_executable
 		linux_install
 		;;
-	darwin)
+	darwin*)
+		binary_url=$BINARY_URL_MACOS_ARM
 		if [[ $CPU_TYPE == "x86_64" ]]; then
 			binary_url=$BINARY_URL_MACOS
 		fi
-		binary_url=$BINARY_URL_MACOS_ARM
 		download_and_create_executable
 		macos_install
 		;;
