@@ -1,8 +1,6 @@
 # zignr
 
-This is a CLI tool to generate `.gitgnore` files written in zig.
-
-
+This is a CLI tool to generate `.gitignore` files written in zig.
 
 # Installation
 
@@ -16,14 +14,14 @@ curl -sSL https://raw.githubusercontent.com/ivansantiagojr/zignr/main/install.sh
 
 # Usage
 
-To create a .gitgnore file you can simply use `zignr <language> > .gitnore`. This command will overwrite your .gitignore file. Example:
+To create a .gitignore file you can simply use `zignr <language> > .gitignore`. This command will overwrite your .gitignore file. Example:
 ```bash
-zignr zig > .gitgnore
+zignr zig > .gitignore
 ```
 
 Multi language example:
 ```bash
-zignr zig,python,lua > .gitgnore
+zignr zig,python,lua > .gitignore
 ```
 
 To see the list of all .gitignore templates you can call `zignr` with, just use:
