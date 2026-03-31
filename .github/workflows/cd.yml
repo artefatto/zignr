@@ -38,7 +38,7 @@ jobs:
         run: zig build -Dtarget=${{ matrix.TARGET }} --release
 
       - name: Renaming the binary
-        run: mv zig-out/bin/zignr zig-out/bin/binary-${{ env.RELEASE_VERSION }}-${{ matrix.TARGET }}
+        run: mv zig-out/bin/omit zig-out/bin/binary-${{ env.RELEASE_VERSION }}-${{ matrix.TARGET }}
 
       - name: Upload the binary
         uses: svenstaro/upload-release-action@v2
