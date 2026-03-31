@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_VERSION="0.3.0"
+APP_VERSION="0.4.0"
 BASE_URL="https://github.com/artefatto/omit/releases/download/v$APP_VERSION"
 
 BINARY_URL_LINUX="$BASE_URL/BINARY-$APP_VERSION-X86_64-LINUX"
