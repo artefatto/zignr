@@ -6,7 +6,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{ .preferred_optimize_mode = .ReleaseSafe });
 
     const exe = b.addExecutable(.{
-        .name = "zignr",
+        .name = "omit",
         .root_module = b.createModule(.{
             .root_source_file = b.path("src/main.zig"),
             .strip = optimize != .Debug,

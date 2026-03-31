@@ -1,7 +1,7 @@
 .{
-    .name = .zignr,
+    .name = .omit,
     .version = "0.3.0",
-    .fingerprint = 0x3b833c668ea9d587,
+    .fingerprint = 0xe15905f19339b4b9,
     .minimum_zig_version = "0.15.2",
     .paths = .{
         "build.zig",
