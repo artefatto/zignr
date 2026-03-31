@@ -15,12 +15,12 @@ pub fn main() !void {
         \\
         \\Commands:
         \\
-        \\  zignr list          prints all avaible gitignore templates to stdout.
-        \\  zignr <template>    prints the gitignore content to stdout.
+        \\  omit list          prints all avaible gitignore templates to stdout.
+        \\  omit <template>    prints the gitignore content to stdout.
         \\
         \\Examples:
         \\
-        \\  zignr python,lua,zig > .gitignore 
+        \\  omit python,lua,zig > .gitignore
         \\  The above command puts the gitignore content of Python, Lua and Zig templates into .gitignore file.
         \\
     ;

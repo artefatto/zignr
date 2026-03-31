@@ -1,18 +1,18 @@
 #!/bin/bash
 
-APP_VERSION="0.3.0"
-BASE_URL="https://github.com/ivansantiagojr/zignr/releases/download/v$APP_VERSION"
+APP_VERSION="0.4.0"
+BASE_URL="https://github.com/artefatto/omit/releases/download/v$APP_VERSION"
 
 BINARY_URL_LINUX="$BASE_URL/BINARY-$APP_VERSION-X86_64-LINUX"
 BINARY_URL_MACOS_ARM="$BASE_URL/BINARY-$APP_VERSION-AARCH64-MACOS"
 BINARY_URL_MACOS="$BASE_URL/binary-$APP_VERSION-x86_64-macos"
-APP_NAME="zignr"
+APP_NAME="omit"
 OS_TYPE=$OSTYPE
 CPU_TYPE=$CPUTYPE
 
 
 download_and_create_executable() {
-	echo "Downloading zignr..."
+	echo "Downloading omit..."
 
 	# Try curl first, fall back to wget
 	if command -v curl &> /dev/null; then
@@ -22,29 +22,29 @@ download_and_create_executable() {
 	fi
 
 	if [ $? -ne 0 ]; then
-    	echo "Failed to download zignr."
+    	echo "Failed to download omit."
     	exit 1
 	fi
 
-	echo "Making zignr executable..."
+	echo "Making omit executable..."
 	chmod +x "$APP_NAME"
 }
 
 linux_install () {
-	echo "Moving zignr to ~/.local/bin..."
+	echo "Moving omit to ~/.local/bin..."
 	mv "$APP_NAME" "$HOME/.local/bin/$APP_NAME"
 
 	# Verify installation
 	if [ $? -eq 0 ]; then
-	    echo "zignr installed successfully!"
+	    echo "omit installed successfully!"
 	else
-	    echo "Failed to move zignr to ~/.local/bin. You might need sudo privileges."
+	    echo "Failed to move omit to ~/.local/bin. You might need sudo privileges."
 	    exit 1
 	fi
 
 	echo
-	echo "Add ~/.local/bin to you PATH so you can run zignr from anywhere"
-	echo "Then use run zignr"
+	echo "Add ~/.local/bin to you PATH so you can run omit from anywhere"
+	echo "Then use run omit"
 }
 
 macos_install() {

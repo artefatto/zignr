@@ -1,4 +1,4 @@
-# zignr
+# Omit
 
 This is a CLI tool to generate `.gitignore` files written in zig.
 
@@ -7,31 +7,31 @@ This is a CLI tool to generate `.gitignore` files written in zig.
 Install on MacOS or GNU/Linux from our pre-built binary by running:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/ivansantiagojr/zignr/main/install.sh | bash -
+curl -sSL https://raw.githubusercontent.com/artefatto/omit/main/install.sh | bash -
 ```
 
-> To make `zignr` available globally you should have `~/.local/bin` on you `PATH`
+> To make `omit` available globally you should have `~/.local/bin` on you `PATH`
 
 # Usage
 
-To create a .gitignore file you can simply use `zignr <language> > .gitignore`. This command will overwrite your .gitignore file. Example:
+To create a .gitignore file you can simply use `omit <language> > .gitignore`. This command will overwrite your .gitignore file. Example:
 ```bash
-zignr zig > .gitignore
+omit zig > .gitignore
 ```
 
 Multi language example:
 ```bash
-zignr zig,python,lua > .gitignore
+omit zig,python,lua > .gitignore
 ```
 
-To see the list of all .gitignore templates you can call `zignr` with, just use:
+To see the list of all .gitignore templates you can call `omit` with, just use:
 ```bash
-zignr list
+omit list
 ```
 
 # References
 This project started as a Zig learning experience (and still is), so I will link my references below:
-First of all, zignr is heavily inspired by [ignr.py](https://github.com/Antrikshy/ignr.py), which uses the [gitignore.io](https://www.toptal.com/developers/gitignore) API.
+First of all, omit is heavily inspired by [ignr.py](https://github.com/Antrikshy/ignr.py), which uses the [gitignore.io](https://www.toptal.com/developers/gitignore) API.
 
 Zig references I used:
 
