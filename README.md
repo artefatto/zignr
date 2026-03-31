@@ -7,7 +7,7 @@ This is a CLI tool to generate `.gitignore` files written in zig.
 Install on MacOS or GNU/Linux from our pre-built binary by running:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/ivansantiagojr/omit/main/install.sh | bash -
+curl -sSL https://raw.githubusercontent.com/artefatto/omit/main/install.sh | bash -
 ```
 
 > To make `omit` available globally you should have `~/.local/bin` on you `PATH`

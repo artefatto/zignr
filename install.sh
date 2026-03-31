@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_VERSION="0.3.0"
-BASE_URL="https://github.com/ivansantiagojr/omit/releases/download/v$APP_VERSION"
+BASE_URL="https://github.com/artefatto/omit/releases/download/v$APP_VERSION"
 
 BINARY_URL_LINUX="$BASE_URL/BINARY-$APP_VERSION-X86_64-LINUX"
 BINARY_URL_MACOS_ARM="$BASE_URL/BINARY-$APP_VERSION-AARCH64-MACOS"
